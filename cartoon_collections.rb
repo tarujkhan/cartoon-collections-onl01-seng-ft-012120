@@ -1,28 +1,53 @@
+
+
 def roll_call_dwarves(array_names)
-  #array_names = []
   i = 0 
   array_names.each_with_index do |w, index|
-  i = i + 1 
-  puts "#{index + 1} #{w}"
-    # code an argument here
-  # Your code here
-end
+    i = i + 1 
+    puts "#{index + 1} #{w}"
+  end
 end
 
 def summon_captain_planet(names)
-  #names = []
-  names.map! {|name| name.capitalize && name.insert ("!")}
+  names.map! do |name| 
+    name.capitalize!
+    name.insert(-1, "!")
+  end
   return names
 end
-  #code an argument here
+  
+
+def summon_captain_planet(names)
+  names.map! do |name| 
+    name.capitalize.insert(-1,"!")
+  end
+  
+  return names
+end
+
+# code an argument here
+
   # Your code here
 #end
+# string2 = "2"
+# string = "I am a string"
+# array = []
+# shopping_cart  = ['rice', 'water']
+# numbers_array = ["one", "two", 3]
 
-#def long_planeteer_calls# code an argument here
-  # Your code here
-#end
 
-#def find_the_cheese# code an argument here
-  # the array below is here to help
- # cheese_types = ["cheddar", "gouda", "camembert"]
-#end
+def long_planeteer_calls(names)
+  names.any? {|name| name.length > 4}
+     
+end
+
+def find_the_cheese(cheeses)
+ cheese_types = ["cheddar", "gouda", "camembert"]
+cheeses.find do |cheese|
+ cheese_types.include?(cheese)
+ end
+ end
+ 
+ 
+
+
